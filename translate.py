@@ -99,7 +99,7 @@ if __name__ == "__main__":
         # Writing to CSV File
         count_err = 0
         filename = args.dir + "" + _lang + "-" + args.target + ".csv"
-        with open(filename,'w', encoding='utf-16') as output_file:
+        with open(filename,'w', encoding='utf-8') as output_file:
             csv_out=csv.writer(output_file)
             # csv_out.writerow([_lang, args.target])
             # From 0..len(trans)==len(translate_queue)
