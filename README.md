@@ -27,3 +27,26 @@ LangMaster allows for multiple arguments. @TODO: Explain them. This is a usage e
 ```
 λ python translate.py -f data_test/icelandic.csv data_test\norwegian.csv data_test\german.csv -l is no de -t en -v -fl 1000 -d Storage/
 ```
+
+## Resources
+
+Specific resources for each language can be found in the `Resources` folder. However, the [Wiktionary](https://en.wiktionary.org) stands out as possibly the greatest resource there is for translation of individual words, acting as a very complete dictionary for most languages. It is useful to use it alongside another dictionary of your choice to ensure maximum coverage of the language (since both dictionaries may be missing some words).
+
+## Typical Errors in Subtitles
+
+In this section I will go over the most common errors that I have found in the subtitles dataset for the different languages to which I am applying LangMaster. These errors must be corrected manually: as far as I know, there's no reliable way of fixing them automatically. This is specially true of lesser known languages such as Icelandic or Norwegian, where as in German it seems more plausible (a querry to identify nouns and apply modifications should suffice).
+
+### German
+
+- [X] Not capitalizing nouns. For example: Writing `art` instead of `Art` (which makes a huge difference in German since the word doesn't have the same meaning as in English).
+
+### Icelandic
+
+- [X] Not using the correct letters. For example: Writing `við` as `vio`, `pér` instead of `þér` or even `pao` instead of `það`. This seems to be a simplification used by lazy subtitle writers who can't be bothered to write their language properly. Especially common with the letters `þ` and `ð`. Identifying these errors is a matter of trial and error until you understand enough of the orthography of the language to detect them efficiently.
+- [X] Words like `vi` are used instead of the appropriate `við` for simplification. These words are often times valid in other nordic languages such as Swedish, but not in Icelandic. This creates issues with automatic translators, since they will attempt to translate anyways and often complete with a "similar" language when they can't find an approrpriate match.
+
+### Norwegian
+
+- [X] Not using the correct letters and/or accents. For example: Writing `å` as `a`.
+
+
