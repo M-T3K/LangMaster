@@ -56,9 +56,6 @@ if __name__ == "__main__":
         file_data.append(tup)
         f_num += 1
     # END WHILE
-    # END IF
-    # @info Breaking point for now
-    # exit(0)
 
     # Read the files
     # translator = Translator()
